@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPerro</title>
+    <link rel="stylesheet" href="/input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="pb-[850px] relative">
+    <nav class="primary-nav-bar bg-black text-white flex justify-between">
+        <img class="h-16 p-2 ml-6 cursor-pointer" src="images/myperrologo.jpg" alt="logoimg">
+        <div class="flex items-center">
+            <div class="py-5 px-5 cursor-pointer text-yellow-500 hover:bg-gray-800 transition ease-in-out">Login</div>
+            <div class="py-5 px-5 cursor-pointer text-yellow-500 hover:bg-gray-800 transition ease-in-out">About Us</div>
+            <div class="py-5 px-5 cursor-pointer text-yellow-500 hover:bg-gray-800 transition ease-in-out">Contact Us</div>
+        </div>
+    </nav>
+
+    <nav class="secondary-nav-bar flex justify-end relative">
+        <div class="sec-nav-bar-elements flex">
+            <div class="py-4 px-6 hover:bg-yellow-100 cursor-pointer ">
+                <button class="flex justify-between items-center" onclick="toggleDropDownServices()">
+                    Services <img class="w-3 ml-1 mt-1 inline-block" src="icons/dropicon.svg" alt="">
+                </button>
+            </div>
+            <div class="py-4 px-6 hover:bg-yellow-100 cursor-pointer">
+                <button id="blogs-button" class="flex justify-between items-center" onclick="toggleDropDownBlogs()">
+                    Blogs <img class="w-3 ml-1 mt-1 inline-block" src="icons/dropicon.svg" alt="">
+                </button>
+            </div>
+            <div class="py-4 px-6 mr-7 hover:bg-yellow-100 cursor-pointer">
+                <button id="locations-button" class="flex justify-between items-center" onclick="toggleDropDownLocations()">
+                    Locations <img class="w-3 ml-1 mt-1 inline-block" src="icons/dropicon.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div id="services-drop-down-list" class="bg-gray-200 w-fit absolute top-[56px] right-[262px] hidden">
+            <div class="pt-2 pb-2 flex flex-col justify-between">
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Walking </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Boarding </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Training </div>
+            </div>
+        </div>
+        <div id="blogs-drop-down-list" class="bg-gray-200 w-fit absolute top-[56px] right-[159px] hidden">
+            <div class="pt-2 pb-2 flex flex-col justify-between">
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">How to train your dog </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Can dogs understand human feelings? </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dogs are mans best friend </div>
+            </div>
+        </div>
+        <div id="locations-drop-down-list" class="bg-gray-200 w-fit absolute top-[56px] right-[28px] hidden">
+            <div class="pt-2 pb-2 flex flex-col justify-between">
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Bangalore </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Vellore </div>
+            </div>
+        </div>
+        <div class="drop-down-menu bg-gray-200 w-fit rounded-lg absolute -bottom-32 right-[10px] hidden">
+            <div class="pt-2 pb-2 flex flex-col justify-between">
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Walking </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Boarding </div>
+                <div class="py-2 pr-10 pl-4 cursor-pointer hover:bg-gray-100 transition ease-in-out">Dog Training </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="landing-page flex justify-between">
+        <div class="w-3/4 h-[400px] pl-20 relative">
+            <img class="w-96 rounded-full inline-block absolute border-8 border-yellow-300" src="images/lab_running.jpg" alt="">
+            <img class="w-60 rounded-full inline-block absolute border-8 border-yellow-300 top-60 left-80" src="images/pet.jpg" alt="">
+        </div>
+        <div class="w-full text-center">
+            <p class="mt-12 ml-9 text-8xl head-text">
+                <span class="welcome-text text-xl">Welcome to</span><br>
+                <span class="name-text tracking-wide">MyPerro</span><br>
+                <span class="tag-text text-xl text-yellow-300 italic">where every pet parent deserves a hassle free vacation!</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="service-cards-section w-full h-fit mt-36 flex justify-center p-10">
+        
+        <div class="service-card flex justify-center items-center w-fit h-fit bg-yellow-100 mx-16 rounded-3xl">
+            <div class="p-4 mx-6">
+                <p class="text-3xl font-bold mb-10 text-left pr-20"><span class="text-yellow-600">DOG</span> <br> WALKING</p>
+                <button class="bg-white px-10 py-2 rounded-full hover:bg-yellow-500 transition ease-in-out">BOOK NOW
+                </button>
+            </div>
+
+            <img class="w-56 inline-block rounded-r-3xl" src="images/dogwalking.jpg" alt="">
+
+        </div>
+
+        <div class="service-card flex justify-center items-center w-fit h-fit bg-yellow-100 mx-16 rounded-3xl">
+            <div class="p-4 mx-6">
+                <p class="text-3xl font-bold mb-10 text-left pr-20"> <span class="text-yellow-600">DOG</span> <br> BOARDING</p>
+                <button class="bg-white px-10 py-2 rounded-full hover:bg-yellow-500 transition ease-in-out">BOOK NOW
+                </button>
+            </div>
+
+            <img class="w-56 inline-block rounded-r-3xl" src="images/doogboarding.jpg" alt="">
+
+        </div>
+
+    </div>
+
+    <div class="dog-training w-full bg-yellow-100 flex justify-between">
+        <p class="text-6xl py-12 px-40 mt-3">
+            <span class="text-yellow-600 font-bold">DOG</span><br>
+            <span class="font-bold">TRAINING</span><br>
+            <span class="text-xl">COMING SOON...</span>
+        </p>
+        <img class="w-[700px] h-80 object-cover" src="images/training.jpg" alt="">
+    </div>
+
+    <div class="about-us mt-10 flex justify-between px-10">
+
+        <div class="p-5 relative">
+            <img class="h-96 rounded-xl inline-block " src="images/team2.jpeg" alt="">
+            <img class="h-44 rounded-xl inline-block absolute left-[335px]" src="images/team3.jpeg" alt="">
+            <img class="w-96 rounded-xl inline-block absolute top-[200px] left-[335px]" src="images/team1.jpeg" alt="">
+        </div>
+
+        <div class="w-1/2 p-4 text-right">
+            <p class="text-7xl font-bold my-9">
+                About Us
+            </p>
+            <p class="text-lg">
+                Welcome dog lovers! At MyPerro, we firmly believe in revolutionizing the Indian dog care industry. Our highly experienced team is wholeheartedly devoted to giving your furry friends a safe, exciting, and nurturing experience. From daily care and dog boarding to grooming and training, we offer a comprehensive array of services tailored to cater to the individual needs of each and every dog. Our top priority at MyPerro is the well-being and happiness of every pup under our care, ensuring they receive the utmost attention, exercise, and socialization to thrive. Join our pack today and witness the unrivaled excellence in dog care!
+            </p>
+
+            <button class="bg-yellow-100 mt-10 px-10 py-4 rounded-full border border-yellow-100 hover:bg-white hover:border hover:border-yellow-200 transition ease-in-out">
+                <span class="text-yellow-950">Know More</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="reviews h-60 bg-yellow-100 mt-8">
+        <p class="text-5xl text-center p-4 font-light py-16">Read what our clients say</p>
+
+        <div class="review-cards flex justify-around">
+            <div class="review-box flex flex-col justify-center items-center">
+                <img class="h-48 w-48 rounded-full border-8 border-white object-cover" src="images/person1.jpg" alt="">
+                <p class="w-96 text-center p-10 italic">
+                    "Very good boarding facility, my dog loves staying here and I appreciate the updates they provide during his stay."
+                </p>
+                <span class="italic">~Lisa</span>
+            </div>
+    
+            <div class="review-box flex flex-col justify-center items-center">
+                <img class="h-48 w-48 rounded-full border-8 border-white object-cover" src="images/person2.jpg" alt="">
+                <p class="w-96 text-center p-10 italic">
+                    "Great experience, my doog looks awesome and the staff is very friendly."
+                </p>
+                <span class="italic">~Jennifer</span>
+            </div>
+    
+            <div class="review-box flex flex-col justify-center items-center">
+                <img class="h-48 w-48 rounded-full border-8 border-white object-cover" src="images/person3.jpg" alt="">
+                <p class="w-96 text-center p-10 italic">
+                    "I am greatly staisfied with the work they do. Exceeded my expectation with the walks and staff."
+                </p>
+                <span class="italic">~Karan</span>
+            </div>
+
+        </div>
+
+        <div class="flex w-full justify-center py-12">
+            <button class="bg-yellow-100 px-20 py-4 rounded-full border border-yellow-100 hover:bg-white hover:border hover:border-yellow-200 transition ease-in-out">
+                <span class="text-yellow-950">Write a review</span>
+            </button>
+        </div>
+    </div>
+     
+    <footer class="bg-black absolute bottom-0 w-full text-white text-lg px-10 pt-10 rounded-t-3xl">
+        <img class="h-16 mb-10" src="images/myperrologo.jpg" alt="logoimg">
+
+        <div class="footer-box flex items-start space-x-32">
+            <div class="services-footer">
+                <span class="text-lg font-bold">SERVICES</span>
+                <ul>
+                    <li>Dog Walking</li>
+                    <li>Dog Boarding</li>
+                    <li>Dog Training</li>
+                </ul>
+            </div>
+            
+            <div class="contact-us-footer">
+                <span class="text-lg font-bold">CONTACT US</span>
+                <ul>
+                    <li>Info: +91 9898989898</li>
+                    <li>Services: +91 9797979797</li>
+                    <li>Email: info@myperro.in</li>
+                </ul>
+            </div>
+
+            <div class="address-footer">
+                <span class="text-lg font-bold">ADDRESS</span>
+                <p>
+                    MyPerro Headquarters<br>
+                    Bangalore, Karnataka 530068, IN
+                </p>
+            </div>
+            
+            
+            <div class="get-in-touch-footer">
+                <p class="text-lg font-bold mb-4">GET IN TOUCH</p>
+
+                <a href="https://www.instagram.com/myperro.in/">
+                    <img class="w-8 inline-block mr-8" src="icons/insta.svg" alt="">
+                </a>
+
+                <a href="https://www.facebook.com/MyPerro.official">
+                    <img class="w-8 inline-block mr-8" src="icons/facebook.svg" alt="">
+                </a>
+
+                <a href="https://www.linkedin.com/company/myperroindia/">
+                    <img class="w-8 inline-block mr-8" src="icons/linkedin.svg" alt="">
+                </a>
+
+                <a href="https://twitter.com/MyPerro_">
+                    <img class="w-8 inline-block mr-8" src="icons/x.svg" alt="">
+                </a>
+
+            </div>
+        </div>
+
+        <p class="text-center mt-11 mb-4 text-xs">© 2024 - MyPerro - All Rights are Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

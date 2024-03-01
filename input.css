@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.welcome-text{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+.name-text{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+.tag-text{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
